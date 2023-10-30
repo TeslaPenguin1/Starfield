@@ -71,7 +71,7 @@ class Interceptor extends Particle //inherits from Particle
     xPos += vel*Math.cos(angle);
     yPos += vel*Math.sin(angle);
     //calculates angle difference, rotates interceptor proportional to
-    delta = Math.abs(targetAngle - angle + Math.random()*0.1-0.05);
+    delta = 0.5*Math.abs(targetAngle - angle + Math.random()*0.1-0.05);
     if(delta > 0.25) delta = 0.25;
     if(angle < targetAngle) angle += delta;
     if(angle > targetAngle) angle -= delta;
